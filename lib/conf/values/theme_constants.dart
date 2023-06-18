@@ -10,6 +10,14 @@ class MyThemes {
   static final lightTheme = ThemeData(
     fontFamily: MyFonts.main,
     primaryColor: MyColors.primary,
+    appBarTheme: AppBarTheme(
+      iconTheme: IconThemeData(
+        color: MyColors.black,
+      ),
+      titleTextStyle: TextStyle(
+        color: MyColors.black,
+      ),
+    ),
     colorScheme: ColorScheme.light(
       primary: MyColors.white,
       secondary: MyColors.neutral,
@@ -19,6 +27,14 @@ class MyThemes {
   static final darkTheme = ThemeData(
     fontFamily: MyFonts.main,
     primaryColor: MyColors.primary,
+    appBarTheme: AppBarTheme(
+      iconTheme: IconThemeData(
+        color: MyColors.white,
+      ),
+      titleTextStyle: TextStyle(
+        color: MyColors.white,
+      ),
+    ),
     colorScheme: ColorScheme.dark(
       primary: MyColors.black,
       secondary: MyColors.neutralVarient,

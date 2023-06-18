@@ -13,7 +13,7 @@ dependencies:
     sdk: flutter
 
   shimmer: ^3.0.0
-  flutter_svg: ^2.0.5
+  flutter_svg: ^1.1.6
   in_date_utils: ^1.2.0+2
 
   shared_preferences: ^2.0.15

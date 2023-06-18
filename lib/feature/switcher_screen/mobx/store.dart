@@ -3,15 +3,11 @@ import 'package:flutter/material.dart';
 
 // Package imports:
 import 'package:mobx/mobx.dart';
-import 'package:themechanger/app.dart';
 
 // Project imports:
 import 'package:themechanger/conf/values/strings_constants.dart';
-import 'package:themechanger/core/root/navigator_service.dart';
 import 'package:themechanger/utils/date_formatter.dart';
 import 'package:themechanger/utils/shared_preference_helper.dart';
-
-// Project imports:
 
 part 'store.g.dart';
 
@@ -29,7 +25,8 @@ abstract class _SwitcherStore with Store {
   //
 
   @observable
-  ThemeMode themeMode = ThemeMode.light;
+  ThemeMode themeMode =
+      MySPHelper.isLightTheme! ? ThemeMode.light : ThemeMode.dark;
 
   //
 
@@ -50,9 +47,6 @@ abstract class _SwitcherStore with Store {
     setThemeMode(isLightTheme ? ThemeMode.light : ThemeMode.dark);
 
     logSwitchHistory();
-
-    final appState = MyApp.of(NavigatorService.key.currentContext!);
-    appState?.rebuildAllChildren();
   }
 
   @action

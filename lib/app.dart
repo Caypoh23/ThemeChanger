@@ -50,28 +50,34 @@ class MyAppState extends State<MyApp> with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
-    return AnnotatedRegion<SystemUiOverlayStyle>(
-      value: MySystemUiOverlayStyle.darkNavBar,
-      child: Provider(
-        create: (_) => store,
-        child: Observer(builder: (_) {
-          final theme = store.themeMode;
+    return Provider(
+      create: (_) => store,
+      child: Consumer<SwitcherStore>(
+        builder: (_, SwitcherStore value, __) {
+          return Observer(builder: (_) {
+            final themeMode = value.themeMode;
 
-          return MaterialApp(
-            themeMode: theme,
-            theme: MyThemes.lightTheme,
-            darkTheme: MyThemes.darkTheme,
-            //
-            builder: builder,
-            debugShowCheckedModeBanner: false,
-            initialRoute: MyRoutes.switcherScreen,
-            onGenerateTitle: (_) => MyStrings.appName,
-            //
-            navigatorKey: NavigatorService.key,
-            navigatorObservers: <NavigatorObserver>[],
-            onGenerateRoute: RouteGenerator.generateRoute,
-          );
-        }),
+            return AnnotatedRegion<SystemUiOverlayStyle>(
+              value: value.isLightTheme
+                  ? MySystemUiOverlayStyle.lightNavBar
+                  : MySystemUiOverlayStyle.darkNavBar,
+              child: MaterialApp(
+                themeMode: themeMode,
+                theme: MyThemes.lightTheme,
+                darkTheme: MyThemes.darkTheme,
+                //
+                builder: builder,
+                debugShowCheckedModeBanner: false,
+                initialRoute: MyRoutes.switcherScreen,
+                onGenerateTitle: (_) => MyStrings.appName,
+                //
+                navigatorKey: NavigatorService.key,
+                navigatorObservers: <NavigatorObserver>[],
+                onGenerateRoute: RouteGenerator.generateRoute,
+              ),
+            );
+          });
+        },
       ),
     );
   }

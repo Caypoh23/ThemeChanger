@@ -7,8 +7,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 // Project imports:
 import 'package:themechanger/conf/values/edge_insets_constants.dart';
 
-// Project imports:
-
 class MyIcon extends StatelessWidget {
   //
   final Key? key;
@@ -18,6 +16,8 @@ class MyIcon extends StatelessWidget {
   final double size;
   final double? width;
   final double? height;
+
+  final Color? color;
 
   final void Function()? onTap;
 
@@ -31,6 +31,8 @@ class MyIcon extends StatelessWidget {
     this.width,
     this.height,
     this.size = 24,
+    //
+    this.color,
     //
     this.onTap,
     //
@@ -46,6 +48,7 @@ class MyIcon extends StatelessWidget {
         padding: padding,
         child: SvgPicture.asset(
           icon,
+          color: color,
           width: width ?? size,
           height: height ?? size,
           fit: BoxFit.scaleDown,
