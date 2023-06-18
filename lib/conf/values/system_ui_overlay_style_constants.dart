@@ -1,0 +1,48 @@
+// Flutter imports:
+import 'package:flutter/services.dart';
+
+// Project imports:
+import 'color_constants.dart';
+
+class MySystemUiOverlayStyle {
+  //
+  static const splash = SystemUiOverlayStyle(
+    statusBarBrightness: Brightness.dark,
+    systemStatusBarContrastEnforced: false,
+    statusBarColor: MyColors.transparent,
+    statusBarIconBrightness: Brightness.light,
+    //
+    systemNavigationBarContrastEnforced: false,
+    systemNavigationBarColor: MyColors.black,
+    systemNavigationBarDividerColor: MyColors.black,
+    systemNavigationBarIconBrightness: Brightness.light,
+  );
+
+  static const lightStatusBar = SystemUiOverlayStyle(
+    statusBarBrightness: Brightness.dark,
+    systemStatusBarContrastEnforced: false,
+    statusBarColor: MyColors.transparent,
+    statusBarIconBrightness: Brightness.light,
+  );
+
+  static const lightNavBar = SystemUiOverlayStyle(
+    systemNavigationBarColor: MyColors.white,
+    systemNavigationBarContrastEnforced: false,
+    systemNavigationBarDividerColor: MyColors.white,
+    systemNavigationBarIconBrightness: Brightness.dark,
+  );
+
+  static const darkNavBar = SystemUiOverlayStyle(
+    systemNavigationBarContrastEnforced: false,
+    systemNavigationBarIconBrightness: Brightness.light,
+    systemNavigationBarColor: MyColors.black,
+    systemNavigationBarDividerColor: MyColors.black,
+  );
+
+  static const appBar = SystemUiOverlayStyle(
+    statusBarColor: MyColors.transparent,
+    statusBarBrightness: Brightness.light,
+    statusBarIconBrightness: Brightness.dark,
+    systemStatusBarContrastEnforced: false,
+  );
+}

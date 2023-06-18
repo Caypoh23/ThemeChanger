@@ -1,0 +1,58 @@
+name: themechanger
+description: ThemeChanger project for creating flutter application for Android and iOS.
+
+publish_to: "none"
+#* Flutter v3.7.0
+
+version: 1.0.0+1
+environment:
+  sdk: ">=2.18.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  shimmer: ^3.0.0
+  flutter_svg: ^2.0.5
+  in_date_utils: ^1.2.0+2
+
+  shared_preferences: ^2.0.15
+  intl: ^0.18.1
+
+  get_it: ^7.2.0
+  injectable: ^2.1.0
+
+  mobx: ^2.1.3
+  provider: ^6.0.4
+  flutter_mobx: ^2.0.6+5
+
+dev_dependencies:
+  copy_with_extension_gen: ^5.0.2
+  flutter_launcher_icons: ^0.13.1
+  injectable_generator: ^2.1.3
+  import_sorter: ^4.6.0
+  build_runner: ^2.3.2
+  mobx_codegen: ^2.1.1
+
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
+
+    - assets/icons/
+
+  fonts:
+    - family: Golos
+      fonts:
+        - asset: assets/fonts/Golos-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Golos-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Golos-Semi-Bold.ttf
+          weight: 600
+        - asset: assets/fonts/Golos-Bold.ttf
+          weight: 700
