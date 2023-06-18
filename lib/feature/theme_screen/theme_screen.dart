@@ -20,7 +20,7 @@ class ThemeScreen extends StatelessWidget {
           status,
         ),
       ),
-      appBar: MyAppBar(title: MyStrings.themeSwitcher),
+      appBar: MyAppBar(title: MyStrings.themeResult),
     );
   }
 }
