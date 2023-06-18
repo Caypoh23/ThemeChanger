@@ -1,3 +1,3 @@
 # ThemeChanger
 
-![Theme switcher]([https://sample/url/name-of-gif-file.gif](https://drive.google.com/file/d/1-cWKKgTgYvZuC9ZhKfwPyWFam0-JId63/view)https://drive.google.com/file/d/1-cWKKgTgYvZuC9ZhKfwPyWFam0-JId63/view) 
+<img src="https://github.com/Caypoh23/ThemeChanger/blob/main/theme-switcher.gif" alt="gif" width="360" height="760">
